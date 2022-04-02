@@ -6,10 +6,10 @@
 2. How the code should work?
 3. Code description.
 
-# 1. General information about the lotto game in Poland. #
+##### 1. General information about the lotto game in Poland. #####
 
 
-# 2. How the code should work? #
+##### 2. How the code should work? #####
 
 
-# 3. Code description. #
+##### 3. Code description. #####
