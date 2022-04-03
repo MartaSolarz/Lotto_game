@@ -39,7 +39,7 @@ The task to be performed during the programming classes was to write a code that
 
 Moreover, I also entered the expected amount of winnings into the code.
 
-Author: Marta Solarz
+###### Author: Marta Solarz ######
 
 ###### Source: ######
 [Information](https://pl.wikipedia.org/wiki/Lotto_(gra_liczbowa)?msclkid=e46d4dc1b33011ec861dd3ba52d9a7a8)
