@@ -6,7 +6,6 @@
 2. The probability of hitting the Lotto.
 3. The amount won and the number of hits.
 4. How the code should work?
-5. Code description.
 
 ##### 1. General information about the lotto game in Poland. #####
 
