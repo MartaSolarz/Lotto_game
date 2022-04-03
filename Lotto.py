@@ -1,7 +1,7 @@
 # Project 21.01.2022
 # The lotto game - use of random module
 
-import random as rd
+import random as rnd
 
 lotto_numbers =  []
 
@@ -34,7 +34,7 @@ for number in range(6):
 
 print('Wybrane przez Ciebie liczby to:', player_numbers )
 
-drawn_numbers_in_the_game = rd.sample(lotto_numbers,6) 
+drawn_numbers_in_the_game = rnd.sample(lotto_numbers,6) 
 
 print('Wylosowane liczby w tej edycji gry lotto to:', drawn_numbers_in_the_game)
 
