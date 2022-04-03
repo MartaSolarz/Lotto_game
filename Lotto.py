@@ -36,7 +36,7 @@ print('Wybrane przez Ciebie liczby to:', player_numbers )
 
 drawn_numbers_in_the_game = rd.sample(lotto_numbers,6) 
 
-print('Wylosowane liczby w tej edycji gry lotto to: ', drawn_numbers_in_the_game)
+print('Wylosowane liczby w tej edycji gry lotto to:', drawn_numbers_in_the_game)
 
 hit_numbers_in_the_game = []  
 
@@ -48,12 +48,12 @@ for x in player_numbers:
 print('Liczba trafionych liczb w grze:', len(hit_numbers_in_the_game))
 
 if len(hit_numbers_in_the_game)>0: 
-    print('Gratulacje! Trafione liczby to: ', hit_numbers_in_the_game)
+    print('Gratulacje! Trafione liczby to:', hit_numbers_in_the_game)
 else:
     print('Niestety! Spróbuj ponownie.')
 
 if len(hit_numbers_in_the_game)==6:
-    print('Wygrana wynosi 1 000 000 000 zł!')
+    print('Wygrana wynosi 1 000 000 zł!')
 elif len(hit_numbers_in_the_game)==5:
     print('Wygrana wynosi kilka tysięcy zł!')
 elif len(hit_numbers_in_the_game)==4:
