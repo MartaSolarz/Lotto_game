@@ -25,10 +25,10 @@ Lotto is the oldest and most popular number game in Poland. The first draw took 
 
 In general, the winnings depend on the amount of the lotto accumulation and the amount allocated to the winning.
 
-* hit 3 numbers: 24 PLN
-* hit 4 numbers: an average of 13% of the amount spent on winning (several hundred PLN)
-* hit 5 numbers: 8% of the amount spent on winning (several thousand PLN)
-* hit 6 numbers: 43% of the amount spent on winning (milion PLN or more)
+* hit 3 numbers: 24 PLN;
+* hit 4 numbers: an average of 13% of the amount spent on winning (several hundred PLN);
+* hit 5 numbers: 8% of the amount spent on winning (several thousand PLN);
+* hit 6 numbers: 43% of the amount spent on winning (milion PLN or more).
 
 ##### 4. How the code should work? #####
 
