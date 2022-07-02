@@ -1,11 +1,12 @@
 # The Lotto Game #
-## Project for programming classes - the lotto game. ##
+## *Project for programming classes - the lotto game.* ##
 
 #### Table of contents: ####
 1. General information about the lotto game in Poland.
 2. The probability of hitting the Lotto.
 3. The amount won and the number of hits.
 4. How the code should work?
+5. Python modules used.
 
 ##### 1. General information about the lotto game in Poland. #####
 
@@ -39,7 +40,11 @@ The task to be performed during the programming classes was to write a code that
 
 Moreover, I also entered the expected amount of winnings into the code.
 
-###### Author: Marta Solarz ######
+##### 5. Python modules used. #####
+
+* random
+
+###### *Author: Marta Solarz* ######
 
 ###### Source: ######
 [Information](https://pl.wikipedia.org/wiki/Lotto_(gra_liczbowa)?msclkid=e46d4dc1b33011ec861dd3ba52d9a7a8)
