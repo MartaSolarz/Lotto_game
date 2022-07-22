@@ -1,64 +1,65 @@
-# Project 21.01.2022
+# Update - 16/07/2022
 # The lotto game - use of random module
 
 import random as rnd
 
-lotto_numbers =  []
+LOTTO_NUMBERS =  [x for x in range(1,50)]
 
-for number in range(1,50):
-    lotto_numbers.append(int(number))
+def user_choice() -> list[int]:
+    index = 1
+    player_numbers = []  
 
-player_numbers = []  
+    while index < 6:
+        print(f'Wybierz liczbę nr {index}:')
+        choice = int(input('Podaj liczbę z przedziału [1,49]: '))
 
-print('Gra lotto - wybór 6 liczb przez użytkownika')
+        if choice in player_numbers:
+            print('Podane liczby muszą być unikalne.')
+        elif choice in range(1,50):
+            player_numbers.append(choice)
+            index += 1
+        else:
+            print('Podana liczba musi być z przedziału [1,49].')
 
-for number in range(6):
-    if number==0:
-        print('Wybierz pierwszą liczbę:')
-        player_numbers.append(int(input('Podaj liczbę z przedziału [1,49]: ')))
-    elif number==1:
-        print('Wybierz drugą liczbę:')
-        player_numbers.append(int(input('Podaj liczbę z przedziału [1,49]: ')))
-    elif number==2:
-        print('Wybierz trzecią liczbę:')
-        player_numbers.append(int(input('Podaj liczbę z przedziału [1,49]: ')))
-    elif number==3:
-        print('Wybierz czwartą liczbę:')
-        player_numbers.append(int(input('Podaj liczbę z przedziału [1,49]: ')))  
-    elif number==4:
-        print('Wybierz piątą liczbę:')
-        player_numbers.append(int(input('Podaj liczbę z przedziału [1,49]: ')))  
-    else:
-        print('Wybierz szóstą liczbę:')
-        player_numbers.append(int(input('Podaj liczbę z przedziału [1,49]: ')))
+    return player_numbers
 
-print('Wybrane przez Ciebie liczby to:', player_numbers )
 
-drawn_numbers_in_the_game = rnd.sample(lotto_numbers,6) 
-
-print('Wylosowane liczby w tej edycji gry lotto to:', drawn_numbers_in_the_game)
-
-hit_numbers_in_the_game = []  
-
-for x in player_numbers:  
-    for y in drawn_numbers_in_the_game:
-        if x == y:
-            hit_numbers_in_the_game.append(x)
+def print_raport(hit_numbers_in_the_game:list[int]) -> None:
             
-print('Liczba trafionych liczb w grze:', len(hit_numbers_in_the_game))
+    print('Liczba trafionych liczb w grze:', len(hit_numbers_in_the_game))
 
-if len(hit_numbers_in_the_game)>0: 
-    print('Gratulacje! Trafione liczby to:', hit_numbers_in_the_game)
-else:
-    print('Niestety! Spróbuj ponownie.')
+    if len(hit_numbers_in_the_game)>0: 
+        print('Gratulacje! Trafione liczby to: ', hit_numbers_in_the_game)
 
-if len(hit_numbers_in_the_game)==6:
-    print('Wygrana wynosi 1 000 000 zł!')
-elif len(hit_numbers_in_the_game)==5:
-    print('Wygrana wynosi kilka tysięcy zł!')
-elif len(hit_numbers_in_the_game)==4:
-    print('Wygrana wynosi kilkaset zł!')
-elif len(hit_numbers_in_the_game)==3:
-    print('Wygrana wynosi 24 zł!')
-else:
-    print('Wygrana wynosi 0 zł :(. Aby wygrać pieniądze traf przynajmniej 3 liczby.')
+        if len(hit_numbers_in_the_game)==6:
+            print('Wygrana wynosi 1 000 000 zł!')
+        elif len(hit_numbers_in_the_game)==5:
+            print('Wygrana wynosi kilka tysięcy zł!')
+        elif len(hit_numbers_in_the_game)==4:
+            print('Wygrana wynosi kilkaset zł!')
+        elif len(hit_numbers_in_the_game)==3:
+            print('Wygrana wynosi 24 zł!')
+        else:
+            print('Wygrana wynosi 0 zł :(. Aby wygrać pieniądze traf przynajmniej 3 liczby.')
+
+    else:
+        print('Niestety! Spróbuj ponownie.')
+        print('Wygrana wynosi 0 zł :(. Aby wygrać pieniądze traf przynajmniej 3 liczby.')
+
+
+def main():
+    print('Gra lotto - wybór 6 liczb przez użytkownika')
+
+    user_numbers = user_choice()
+    print('Wybrane przez Ciebie liczby to:', user_numbers)
+
+    drawn_numbers_in_the_game = rnd.sample(LOTTO_NUMBERS,6) 
+    print('Wylosowane liczby w tej edycji gry lotto to: ', drawn_numbers_in_the_game)
+    
+    hit_numbers_in_the_game = [x for x in user_numbers for y in drawn_numbers_in_the_game if x==y] 
+
+    print_raport(hit_numbers_in_the_game)
+
+
+if __name__ == '__main__':
+    main()
