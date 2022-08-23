@@ -1,18 +1,18 @@
 # The Lotto Game #
-## *Project for programming classes - the lotto game.* ##
+*Project for programming classes - the lotto game.* 
 
-#### Table of contents: ####
-1. General information about the lotto game in Poland.
-2. The probability of hitting the Lotto.
-3. The amount won and the number of hits.
+## Table of contents: 
+1. General information about the lotto game in Poland
+2. The probability of hitting the Lotto
+3. The amount won and the number of hits
 4. How the code should work?
-5. Python modules used.
+5. Python packages used
 
-##### 1. General information about the lotto game in Poland. #####
+## 1. General information about the lotto game in Poland 
 
 Lotto is the oldest and most popular number game in Poland. The first draw took place on January 27, 1957. The game is based on selecting six numbers from a pool of 1 to 49. There are many versions of the above game. The following description and code are for the base, most classic version of the game. So far, the highest prize was 36726210.2 PLN and took place on March 16, 2017.
 
-##### 2. The probability of hitting the Lotto. #####
+## 2. The probability of hitting the Lotto
 
 * hit 0 numbers: 43.6%
 * hit 1 number: 41.3%
@@ -22,7 +22,7 @@ Lotto is the oldest and most popular number game in Poland. The first draw took 
 * hit 5 numbers: 0.0018%
 * hit 6 numbers: 0.0000072%
 
-##### 3. The amount won and the number of hits. #####
+## 3. The amount won and the number of hits
 
 In general, the winnings depend on the amount of the lotto accumulation and the amount allocated to the winning.
 
@@ -31,7 +31,7 @@ In general, the winnings depend on the amount of the lotto accumulation and the 
 * hit 5 numbers: 8% of the amount spent on winning (several thousand PLN);
 * hit 6 numbers: 43% of the amount spent on winning (milion PLN or more).
 
-##### 4. How the code should work? #####
+## 4. How the code should work?
 
 The task to be performed during the programming classes was to write a code that:
 * implements a lotto game using the random module;
@@ -40,11 +40,10 @@ The task to be performed during the programming classes was to write a code that
 
 Moreover, I also entered the expected amount of winnings into the code.
 
-##### 5. Python modules used. #####
+## 5. Python packages used 
 
-* random
+* ```numpy```
 
-###### *Author: Marta Solarz* ######
+*Author: Marta Solarz*
 
-###### Source: ######
-[Information](https://pl.wikipedia.org/wiki/Lotto_(gra_liczbowa)?msclkid=e46d4dc1b33011ec861dd3ba52d9a7a8)
+[Source](https://pl.wikipedia.org/wiki/Lotto_(gra_liczbowa)?msclkid=e46d4dc1b33011ec861dd3ba52d9a7a8)
