@@ -1,15 +1,15 @@
-# Update - 16/07/2022
-# The lotto game - use of random module
+# Update - 23/08/2022
+# The lotto game 
 
-import random as rnd
+import numpy as np
 
-LOTTO_NUMBERS =  [x for x in range(1,50)]
+LOTTO_NUMBERS =  np.array(np.arange(1,50))
 
 def user_choice() -> list[int]:
     index = 1
     player_numbers = []  
 
-    while index < 6:
+    while index < 7:
         print(f'Wybierz liczbę nr {index}:')
         choice = int(input('Podaj liczbę z przedziału [1,49]: '))
 
@@ -21,7 +21,7 @@ def user_choice() -> list[int]:
         else:
             print('Podana liczba musi być z przedziału [1,49].')
 
-    return player_numbers
+    return np.array(player_numbers)
 
 
 def print_raport(hit_numbers_in_the_game:list[int]) -> None:
@@ -53,7 +53,7 @@ def main():
     user_numbers = user_choice()
     print('Wybrane przez Ciebie liczby to:', user_numbers)
 
-    drawn_numbers_in_the_game = rnd.sample(LOTTO_NUMBERS,6) 
+    drawn_numbers_in_the_game = np.random.choice(LOTTO_NUMBERS,6) 
     print('Wylosowane liczby w tej edycji gry lotto to: ', drawn_numbers_in_the_game)
     
     hit_numbers_in_the_game = [x for x in user_numbers for y in drawn_numbers_in_the_game if x==y] 
